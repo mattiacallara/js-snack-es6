@@ -15,3 +15,17 @@ const randomizzaPuntiEFalli = squadre => {
 };
 
 randomizzaPuntiEFalli(squadreDiCalcio);
+
+const estraiNomiEFalli = squadre => {
+    const output = [];
+
+    for (const squadra of squadre) {
+        output.push({nome: squadra.nome, falliSubiti: squadra.falliSubiti});
+    }
+    
+    return output;
+};
+
+const squadreConFalli = estraiNomiEFalli(squadreDiCalcio);
+
+console.log(squadreConFalli);
