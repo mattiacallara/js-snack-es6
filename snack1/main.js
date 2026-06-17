@@ -7,3 +7,16 @@ const biciDaCorsa = [
     {nome: 'Canyon Endurace CF SLX 7 Di2', pesoKg: 8.18},
     {nome: 'Cube Agree C62 Pro', pesoKg: 7.9},
 ];
+
+const biciPiuLeggera = biciclette => {
+    let output;
+
+    for (const bici of biciDaCorsa) {
+        if (output === undefined || bici.pesoKg < output.pesoKg) output = bici;
+    }
+
+  return output;
+};
+
+
+    console.log(biciPiuLeggera(biciDaCorsa)); 
