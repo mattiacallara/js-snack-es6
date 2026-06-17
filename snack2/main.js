@@ -6,3 +6,12 @@ const squadreDiCalcio = [
     {nome:'Como', punti: 0, falliSubiti: 0},
     {nome:'Napoli', punti: 0, falliSubiti: 0},
 ];
+
+const randomizzaPuntiEFalli = squadre => {
+    for (const squadra of squadre) {
+        squadra.punti = Math.floor(Math.random() * 112);
+        squadra.falliSubiti = Math.floor(Math.random() * 40);
+    }
+};
+
+randomizzaPuntiEFalli(squadreDiCalcio);
